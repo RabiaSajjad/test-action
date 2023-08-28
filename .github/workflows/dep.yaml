@@ -13,8 +13,7 @@ jobs:
       - uses: actions/setup-python@v3
   
       - name: Checkout repository and Install dependencies
-        run:
-          command: |
+        run: |
             git clone https://github.com/open-data/deplane.git
             pip install jsonschema
             pip install pyyaml
