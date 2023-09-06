@@ -19,6 +19,8 @@ jobs:
           cd deplane && python setup.py develop
           sudo apt install gettext
           make compile-mo
+          ls -la
+          pwd
           echo "Generating Data Element Profiles"
           echo "Consultations"
           deplane en https://open.canada.ca/data/recombinant-schema/consultations.json dep/consultations-en.docx
