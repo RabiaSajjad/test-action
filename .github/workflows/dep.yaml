@@ -24,6 +24,7 @@ jobs:
           deplane en https://open.canada.ca/data/recombinant-schema/consultations.json dep/consultations-en.docx
           deplane fr https://open.canada.ca/data/recombinant-schema/consultations.json dep/consultations-fr.docx
           ls -la
+          git status
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add .
