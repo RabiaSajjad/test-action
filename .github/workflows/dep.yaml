@@ -14,9 +14,9 @@ jobs:
   
       - name: Checkout repository and Install dependencies
         run: |
-            git clone https://github.com/open-data/deplane.git
-            pip install jsonschema
-            pip install pyyaml
-            cd deplane && python setup.py develop
-            sudo apt install gettext
-            make compile-mo
+          git clone https://github.com/open-data/deplane.git
+          pip install jsonschema
+          pip install pyyaml
+          cd deplane && python setup.py develop
+          sudo apt install gettext
+          make compile-mo
