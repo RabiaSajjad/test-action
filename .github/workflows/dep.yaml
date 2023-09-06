@@ -21,6 +21,11 @@ jobs:
           make compile-mo
           echo "Generating Data Element Profiles"
           echo "Consultations"
-          deplane en https://open.canada.ca/data/recombinant-schema/consultations.json consultations-en.docx
-          deplane fr https://open.canada.ca/data/recombinant-schema/consultations.json consultations-fr.docx
+          deplane en https://open.canada.ca/data/recombinant-schema/consultations.json dep/consultations-en.docx
+          deplane fr https://open.canada.ca/data/recombinant-schema/consultations.json dep/consultations-fr.docx
           ls -la
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m "Adding DEPs"
+          git push -f origin master
