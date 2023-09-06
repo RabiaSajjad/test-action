@@ -1,0 +1,23 @@
+name: Generate Data Element Profiles
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 5 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+  
+      - name: Checkout repository and Install dependencies
+        run:
+          command: |
+            git clone https://github.com/open-data/deplane.git
+            pip install jsonschema
+            pip install pyyaml
+            cd deplane && python setup.py develop
+            sudo apt install gettext
+            make compile-mo
