@@ -20,13 +20,13 @@ jobs:
           sudo apt install gettext
           make compile-mo
           mkdir dep
-          ls -la
-          pwd
           echo "Generating Data Element Profiles"
           echo "Consultations"
           deplane en https://open.canada.ca/data/recombinant-schema/consultations.json consultations-en.docx
           deplane fr https://open.canada.ca/data/recombinant-schema/consultations.json consultations-fr.docx
           ls -la
+          pwd
+          ls -l dep
           pwd
           git status
           git config user.name 'github-actions[bot]'
