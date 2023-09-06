@@ -18,5 +18,6 @@ jobs:
           pip install pyyaml
           cd deplane && python setup.py develop
           sudo apt install gettext
-          ls -la
           make compile-mo
+          deplane fr https://open.canada.ca/data/recombinant-schema/consultations.json consultations-fr.docx
+          ls -la
