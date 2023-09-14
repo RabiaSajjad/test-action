@@ -28,8 +28,8 @@ jobs:
           ls -la
           echo "Checking differences"
           echo
-          git diff --exit-code --ignore-cr-at-eol
           cd ..
+          git diff --exit-code --ignore-cr-at-eol dep/
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
