@@ -2,9 +2,9 @@ name: Generate Data Element Profiles
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron:  '0 5 * * *'
-
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,7 +29,7 @@ jobs:
           echo "Checking differences"
           echo
           cd ..
-          git diff --exit-code --ignore-cr-at-eol dep/
+          git diff --exit-code --ignore-cr-at-eol --binary dep/
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
