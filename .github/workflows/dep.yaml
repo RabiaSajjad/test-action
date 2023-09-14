@@ -20,6 +20,7 @@ jobs:
           sudo apt install gettext
           make compile-mo
           cd dep
+          ls -l
           echo "Generating Data Element Profiles"
           echo "Consultations"
           deplane en https://open.canada.ca/data/recombinant-schema/consultations.json consultations-en.docx
