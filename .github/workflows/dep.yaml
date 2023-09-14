@@ -27,7 +27,7 @@ jobs:
           ls -la
           echo "Checking differences"
           echo
-          git diff --exit-code --binary --ignore-cr-at-eol
+          git diff --exit-code --ignore-cr-at-eol
           cd ..
           git status
           git config user.name github-actions
