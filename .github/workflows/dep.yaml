@@ -19,7 +19,6 @@ jobs:
           cd deplane && python setup.py develop
           sudo apt install gettext
           make compile-mo
-          mkdir dep
           cd dep
           echo "Generating Data Element Profiles"
           echo "Consultations"
@@ -28,6 +27,7 @@ jobs:
           ls -la
           cd ..
           git status
+          git diff --exit-code
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
