@@ -25,9 +25,9 @@ jobs:
           deplane en https://open.canada.ca/data/recombinant-schema/consultations.json consultations-en.docx
           deplane fr https://open.canada.ca/data/recombinant-schema/consultations.json consultations-fr.docx
           ls -la
+          git diff --exit-code
           cd ..
           git status
-          git diff dep/ --exit-code
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add dep/
